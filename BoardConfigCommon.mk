@@ -1,5 +1,5 @@
 DEVICE_PATH := device/huawei/hi6620oem-common
-
+#KERNEL_CROSS_COMPILE := $(HOME)/dev/sdk/gcc-linaro-4.9.4-2017.01-x86_64_arm-linux-gnueabi/bin/arm-linux-gnueabi-
 TARGET_NO_BOOTLOADER := true
 TARGET_NO_RADIOIMAGE := true
 #TARGET_OMIT_RECOVERY := true
@@ -36,7 +36,7 @@ BOARD_KERNEL_CMDLINE := k3v2mem k3v2_ion=1 vmalloc=256M maxcpus=4 initcall_debug
 BOARD_KERNEL_BASE := 0x07000000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x04000000
-TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/zImage
+#TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/zImage
 
 # Board-specific kernel headers
 TARGET_BOARD_KERNEL_HEADERS := $(DEVICE_PATH)/kernel-headers
