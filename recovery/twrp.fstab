@@ -1,0 +1,12 @@
+# mount point	fstype		device		[device2]	fstype2
+
+/boot		emmc		/dev/block/platform/hi_mci.0/by-name/boot				flags=flashimg=1
+/misc		emmc		/dev/block/platform/hi_mci.0/by-name/misc				flags=backup=0
+/cache		ext4		/dev/block/platform/hi_mci.0/by-name/cache				flags=wipeduringfactoryreset;wipeingui
+/cust		ext4		/dev/block/platform/hi_mci.0/by-name/cust				flags=display="Custom";backup=1;wipeingui
+/oeminfo	emmc		/dev/block/platform/hi_mci.0/by-name/oeminfo				flags=display="OEMinfo";backup=1;flashimg=1
+/system		ext4		/dev/block/platform/hi_mci.0/by-name/system
+/data		ext4		/dev/block/platform/hi_mci.0/by-name/userdata				length=-16384
+/storage	ext4		/data/share								flags=display="Internal Storage";backup=1;usermrf;fsflags="bind"
+/ext_sdcard	auto		/dev/block/mmcblk1p1	/dev/block/platform/hi_mci.1/mmcblk1p1		flags=display="External SD";storage;removable
+/usb		auto		/dev/block/sda1								flags=display="USB OTG";storage;removable
