@@ -477,7 +477,7 @@ struct android_ycbcr {
     uint32_t reserved[8];
 };
 
-/**
+/*
  * Structure used to define depth point clouds for format HAL_PIXEL_FORMAT_BLOB
  * with dataSpace value of HAL_DATASPACE_DEPTH.
  * When locking a native buffer of the above format and dataSpace value,
